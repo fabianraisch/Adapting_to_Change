@@ -1,0 +1,58 @@
+{
+    "data": {
+        "folder": "data/",
+        "seq_len": 96,
+        "train_split": 0.7,
+        "train_ranges_col_name": "day_of_year",
+        "dataframe_limit": 10000,
+        "target_cols": ["thermalZoneTAir"],
+        "feature_cols": ["u", "weaBusHDifHor", "weaBusHDirNor", "weaBusTDryBul", "thermalZoneTAir"],
+        "feature_scaler_type": "minmax",
+        "target_scaler_type": "minmax",
+        "exclude": [],
+        "scale_target": true
+    },
+
+    "dataloader": {
+        "batch_size": 32
+    },
+
+    "model": {
+        "name": "lstm",
+        "forecast_horizon": 4,
+        "num_layers": 3,
+        "hidden_size": 125,
+        "optimizer": "adam",
+        "dropout": 0.0,
+        "lr": 0.0001
+    },
+
+    "training": {
+        "use_amp": false,
+        "use_amp_outside_train": false,
+        "save_best_model": "val",
+        "save_best_metric": "rmse",
+        "loss_function": "mse",
+        "epochs": 25
+    },
+
+    "override": {
+        "do_override": true,
+        "freeze_layers_except": [],
+        "freeze_lstm_layers": [],
+        "scaler_name": "",
+        "optimizer_override_type": "adam",
+        "optimizer_lr": 0.0001
+    },
+
+    "adaptive_learning": {
+        "UPDATE_INTERVAL": 2880,
+        "TRAIN_VAL_INTERVAL": 2880,
+        "TEST_INTERVAL": 2880,
+        "nr_years": 5.1,
+        "PRETRAINED_MODEL_NAME": "gen",
+        "mode": "IL",
+        "output_file_name": "test"
+    }
+
+}

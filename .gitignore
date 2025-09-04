@@ -14,9 +14,6 @@ best_hyperparams.json
 # CSV FILE IGNORES
 *.CSV
 
-# MODEL FOLDERS
-models/*
-
 # Blueprints in general
 */blueprints/*
 
@@ -344,8 +341,6 @@ pyrightconfig.json
 .history
 .ionide
 
-# ignore the output folder
-outputs/
 
 # ignore the wandb folder that is created due to model_clone.py
 scripts/helper/wandb/
