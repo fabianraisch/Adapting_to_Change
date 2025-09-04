@@ -20,13 +20,6 @@ models/*
 # Blueprints in general
 */blueprints/*
 
-# CSV FILE IGNORE RELAX (! and then the name of the CSV File, see https://git-scm.com/docs/gitignore)
-data/*
-/data/*
-!data/sr_900
-!data/trg_900_inside_dist
-!data/test/*
-
 # MODEL FILE IGNORE RELAX(! and then the name of the CSV File, see https://git-scm.com/docs/gitignore)
 
 # Created by https://www.toptal.com/developers/gitignore/api/python,pycharm,visualstudiocode,git
