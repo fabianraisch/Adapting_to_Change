@@ -1,5 +1,4 @@
 # Custom Ignores:
-outputs/*
 resources/*
 !resources/config.json
 */wandb/*
@@ -11,8 +10,6 @@ best_hyperparams.json
 *.log 
 *.sh
 
-# CSV FILE IGNORES
-*.CSV
 
 # Blueprints in general
 */blueprints/*
